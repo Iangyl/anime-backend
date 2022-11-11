@@ -1,7 +1,10 @@
 import express from 'express';
 import mongoose from 'mongoose';
+import path from 'path';
+import cors from 'cors';
 import dotenv from 'dotenv';
-import home from './routes/home';
+import fileUpload from 'express-fileupload';
+import routes from './routes/index';
 
 dotenv.config();
 
@@ -15,7 +18,11 @@ async function main() {
 
   const app = express();
 
-  app.use('/', home);
+  app.use(cors());
+  app.use(express.json());
+  app.use(express.static(path.resolve(__dirname, 'static')));
+  app.use(fileUpload({}));
+  app.use('/v1', routes);
 
   app.listen(port, () => console.log(`App listening to PORT: ${port}`));
 }

@@ -4,14 +4,16 @@ export type AgeRating = 'G' | 'PG' | 'PG-13' | 'R' | 'XR';
 
 export default interface IAnime {
   title: string;
+  img?: string;
   type: AnimeTypes;
   status: AnimeStatus;
-  date: Date;
-  genre: Genre;
-  subgenre: Subgenre;
+  date?: Date;
+  genre: Genre[];
+  subgenre?: Subgenre[];
   age_rating: AgeRating;
-  duration: string;
-  rate: number;
+  duration?: string;
+  rate?: number;
   episodesAmount: number;
-  description: string;
+  announcedEpisodesAmount?: number;
+  description?: string;
 }

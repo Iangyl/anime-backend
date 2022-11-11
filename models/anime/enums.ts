@@ -24,7 +24,7 @@ export enum Subgenre {
   SHOUNEN = 'Shounen',
   SHOUNEN_AI = 'Shounen-ai',
   SPACE = 'Space',
-  SPORTS = 'Sports',
+  SPORT = 'Sport',
   SUPER_POWER = 'Super Power',
   TRAGEDY = 'Tragedy',
   VAMPIRE = 'Vampire',
@@ -57,7 +57,7 @@ export enum AnimeStatus {
 
 export enum AnimeTypes {
   FILM = 'Film',
-  SERIAL = 'TV Serial',
+  SERIAL = 'TV Series',
   ONA = 'ONA',
   OVA = 'OVA',
   SPECIAL = 'Special',
