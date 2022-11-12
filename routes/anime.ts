@@ -10,7 +10,7 @@ router.get('/', async (req: Request, res: Response) => {
     res.status(200).send({ success: true, data: result });
   } catch (e: unknown) {
     console.log(e);
-    res.status(401).send({ success: false, error: e });
+    res.status(401).send({ success: false, message: e });
   }
 });
 
@@ -21,7 +21,7 @@ router.get('/', async (req: Request, res: Response) => {
     res.status(200).send({ success: true, data: result });
   } catch (e: unknown) {
     console.log(e);
-    res.status(401).send({ success: false, error: e });
+    res.status(401).send({ success: false, message: e });
   }
 });
 
@@ -32,7 +32,7 @@ router.post('/add', async (req: Request, res: Response) => {
     res.status(200).send({ success: true });
   } catch (e: unknown) {
     console.log(e);
-    res.status(401).send({ success: false, error: e });
+    res.status(401).send({ success: false, message: e });
   }
 });
 
@@ -46,7 +46,7 @@ router.patch('/edit', async (req: Request, res: Response) => {
     res.status(200).send({ success: true });
   } catch (e: unknown) {
     console.log(e);
-    res.status(401).send({ success: false, error: e });
+    res.status(401).send({ success: false, message: e });
   }
 });
 
@@ -59,7 +59,7 @@ router.delete('/delete', async (req: Request, res: Response) => {
     res.status(200).send({ success: true });
   } catch (e: unknown) {
     console.log(e);
-    res.status(401).send({ success: false, error: e });
+    res.status(401).send({ success: false, message: e });
   }
 });
 
