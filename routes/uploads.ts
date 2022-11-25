@@ -18,7 +18,12 @@ router.post('/cover', async (req: Request, res: Response) => {
       const fileName = fileId + `.${img.mimetype.split('/')[1]}`;
       img.mv(path.resolve(__dirname, '..', 'static', fileName));
 
-      res.status(200).send({ success: true, data: fileId });
+      res
+        .status(200)
+        .send({
+          success: true,
+          data: fileName,
+        });
     }
   } catch (e: unknown) {
     if (typeof e === 'string') {
