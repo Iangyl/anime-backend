@@ -14,7 +14,7 @@ router.get('/', async (req: Request, res: Response) => {
   }
 });
 
-router.get('/:id', async (req: Request, res: Response) => {
+router.get('/:id', (req: Request, res: Response) => {
   try {
     AnimeModel.findById(req.params.id)
       .then((data) => {
@@ -46,7 +46,7 @@ router.post('/add', async (req: Request, res: Response) => {
   }
 });
 
-router.patch('/edit/:id', async (req: Request, res: Response) => {
+router.patch('/edit/:id', (req: Request, res: Response) => {
   try {
     AnimeModel.findByIdAndUpdate(req.params.id, { ...req.body })
       .then(() => {
@@ -67,7 +67,7 @@ router.patch('/edit/:id', async (req: Request, res: Response) => {
   }
 });
 
-router.delete('/delete/:id', async (req: Request, res: Response) => {
+router.delete('/delete/:id', (req: Request, res: Response) => {
   try {
     AnimeModel.findByIdAndDelete(req.params.id)
       .then(() => {
