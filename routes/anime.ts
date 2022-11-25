@@ -9,7 +9,7 @@ router.get('/', async (req: Request, res: Response) => {
 
     res.status(200).send({ success: true, data: result });
   } catch (e: unknown) {
-    console.log(e);
+    console.error(e);
     res.status(401).send({ success: false, message: e });
   }
 });
@@ -30,7 +30,7 @@ router.get('/:id', (req: Request, res: Response) => {
           });
       });
   } catch (e: unknown) {
-    console.log(e);
+    console.error(e);
     res.status(401).send({ success: false, message: e });
   }
 });
@@ -41,7 +41,7 @@ router.post('/add', async (req: Request, res: Response) => {
 
     res.status(200).send({ success: true });
   } catch (e: unknown) {
-    console.log(e);
+    console.error(e);
     res.status(401).send({ success: false, message: e });
   }
 });
@@ -62,7 +62,7 @@ router.patch('/edit/:id', (req: Request, res: Response) => {
           });
       });
   } catch (e: unknown) {
-    console.log(e);
+    console.error(e);
     res.status(401).send({ success: false, message: e });
   }
 });
@@ -83,7 +83,7 @@ router.delete('/delete/:id', (req: Request, res: Response) => {
           });
       });
   } catch (e: unknown) {
-    console.log(e);
+    console.error(e);
     res.status(401).send({ success: false, message: e });
   }
 });

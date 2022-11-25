@@ -28,4 +28,4 @@ async function main() {
   app.listen(port, () => console.log(`App listening to PORT: ${port}`));
 }
 
-main().catch((err) => console.log(err));
+main().catch((err) => console.error(err));
