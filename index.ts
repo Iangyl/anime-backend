@@ -9,7 +9,7 @@ import routes from './routes/index';
 dotenv.config();
 
 async function main() {
-  const port = process.env.PORT || 3001;
+  const port = process.env.PORT || 8080;
   const password = process.env.MONGO_DB_PWD;
 
   await mongoose.connect(

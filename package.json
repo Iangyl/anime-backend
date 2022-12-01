@@ -8,9 +8,10 @@
   "license": "MIT",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node dist/index.js",
+    "start": "node ./dist/index.js",
     "dev": "tsc && nodemon dist/index.js",
-    "build": "tsc"
+    "build": "tsc",
+    "gcp-build": "tsc -p ."
   },
   "devDependencies": {
     "@types/cors": "^2.8.12",
